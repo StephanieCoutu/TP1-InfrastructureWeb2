@@ -1,0 +1,192 @@
+@font-face {
+    font-family: RobotoThin;
+    src: url(/fonts/Roboto-Thin.ttf)
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: petitscript;
+    src: url(/fonts/PetitFormalScript-Regular.ttf)
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+body {
+    width: 95%;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 0.9rem;
+    margin: 0px;
+    padding: 0px;
+    color: red;
+}
+
+/* NAVIGATION */
+
+nav {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    width: 62%;
+    padding: 0px;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #313e40;
+    color: white;
+}
+
+/* ACCUEIL */
+
+.image-accueil {
+    display: inline-block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+
+/* .flecheImageRight{
+    float: right;
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid red;
+}
+
+.flecheImageLeft{
+    float: left;
+    clear: both;
+} */
+
+.text {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 0px;
+
+}
+
+.rechercher {
+    width: 30%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.infolettre {
+    width: 95%;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #313e40;
+}
+
+/* À PROPOS */
+
+#apropos {
+    width: 95%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#apropos p{
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.conseils {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-conseil {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 0.9rem;
+}
+
+.text-conseil p {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* NOS ANIMAUX */
+
+
+
+/* STATISTIQUES */
+
+/* NOS SAUVETEURS */
+
+/* NOTRE LOCALISATION */
+
+/* FOOTER */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    width: 300px;
+    clear: both;
+}
+
+.right-inline {
+    display: inline;
+    float: right;
+    border: 2px solid red;
+    width: 300px;
+}
