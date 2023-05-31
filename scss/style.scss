@@ -1,30 +1,25 @@
 $couleur-logo: #313e40;
-
 @font-face {
-    font-family: RobotoThin;
-    src: url(/fonts/Roboto-Thin.ttf)
+    font-family: 'roboto';
+    src: url(/fonts/roboto/Roboto-Light.ttf);
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url(/fonts/Roboto-Light.ttf);
-}
-
-@font-face {
-    font-family: petitscript;
-    src: url(/fonts/PetitFormalScript-Regular.ttf)
+    font-family: 'roboto-bold';
+    src: url(/fonts/roboto/Roboto-Bold.ttf);
 }
 
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'roboto';
 }
 
 .logo {
     float: left;
     margin-left: 15px;
     margin-top: 15px;
+    position: absolute;
 }
 
 body {
@@ -53,10 +48,10 @@ p {
 
 nav {
     margin-top: 10px;
-    margin-bottom: 70px;
-    width: 62%;
+    width: 95%;
     padding: 0px;
-    float: right;
+    display: inline-flex;
+    justify-content: flex-end;
 }
 
 nav li {
@@ -87,11 +82,12 @@ li a:hover {
 /* ACCUEIL */
 
 .image-accueil {
-    display: inline-block;
+    width: 95%;
     margin: 0 auto;
+    padding-top: 150px;
     padding-bottom: 10px;
-    padding-top: 60px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .ligne {
@@ -169,16 +165,55 @@ li a:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px 200px;
-    gap: 1rem;
-    background-color: red;
+    grid-template-columns: repeat(18, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 0.7px;
+    padding-bottom: 90px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.chatons-blanc {
+    grid-row: 1/5;
+    grid-column: 5/13; 
+}
+
+.chat-siamois {
+    grid-row: 3/7;
+    grid-column: 1/5; 
+}
+
+.chat-majestueux {
+    grid-row: 4/8;
+    grid-column: 16/19; 
+}
+
+.chien-fond-blanc {
+    grid-row: 5/8;
+    grid-column: 5/8; 
+}
+
+.chien-fond-gris {
+    grid-row: 2/5;
+    grid-column: 13/16; 
+}
+
+.chien-fond-rose {
+    grid-row: 5/9;
+    grid-column: 8/16; 
+}
+
+#animaux {
+    border-bottom: 1px solid $couleur-logo;
 }
 
 /* STATISTIQUES */
 
 #statistiques {
-    margin-bottom: 500px;
+    width: 70%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
 }
 
 .statistique-container {
@@ -190,9 +225,10 @@ li a:hover {
 
 .statistique-bouton-bloc {
     width: 50%;
-    text-align: center;
+    text-align: left;
     float: right;
-    margin-top: 50px;
+    clear: both;
+    margin-top: 40px;
 }
 
 .statistique-image {
@@ -217,11 +253,11 @@ li a:hover {
 .admissions-2022 {
     float: left;
     margin-right: 50px;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .admissions-2021 {
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .large {
@@ -231,23 +267,164 @@ li a:hover {
 
 /* NOS SAUVETEURS */
 
+.intro-sauveurs {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.hero {
+    width: 30%;
+    display:inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.heros {
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.bold {
+    font-family: 'roboto-bold';
+    color: $couleur-logo;
+}
+
+.margin {
+    margin-bottom: 10px;
+}
+
 /* NOTRE LOCALISATION */
+
+iframe {
+    margin-top: 100px;
+    position: absolute;
+    width: 95%;
+}
+
+.map {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.formulaire {
+    width: 400px;
+    height: 350px;
+    background-color:#313e40;
+    margin-bottom: 100px;
+    position: relative;
+    top: 250px; left: 700px;
+}
+
+.formulaire h1 {
+    color: white;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.formulaire p {
+    color: white;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.prenom-nom {
+    display: inline-flex;
+    margin-left: 30px;
+}
+
+.input-control.success inputs {
+    border-color: green;
+}
+
+input[type=mail] {
+    margin-left: 30px;
+    width: 312px;
+}
+
+textarea {
+    width: 312px;
+    margin-left: 30px;
+}
+
+input[type=submit] {
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    font-family: 'roboto-bold';
+    color: $couleur-logo;
+}
+
+input[type=submit]:hover{
+    background-color: $couleur-logo;
+    color: white;
+    border: 1px solid white;
+}
 
 /* FOOTER */
 
 .left {
     float: left;
+    margin-right: 10px;
+}
+
+.left-absolute {
+    float: left;
+    position: absolute;
+    margin-top: 70px;
 }
 
 .right {
     float: right;
-    width: 300px;
-    clear: both;
+    margin-left: 30px;
+} 
+
+.tel-courriel {
+    float: right;
+    width: 400px;
+    margin-top: 70px;
 }
 
-.right-inline {
-    display: inline;
-    float: right;
-    border: 2px solid red;
-    width: 300px;
+.inline {
+    display:inline-flex;
+    justify-content: flex-end;
+    width: 150px;
 }
+
+footer {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.logo-footer {
+    text-align: center;
+    margin: 400px auto;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    width: 95%;
+}
+
+.nav-footer {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $couleur-logo;
+}
+
+.icone {
+    text-align: center;
+    width: 20%;
+    margin: 70px auto;
+}
+
+
