@@ -1,3 +1,5 @@
+$couleur-logo: #313e40;
+
 @font-face {
     font-family: RobotoThin;
     src: url(/fonts/Roboto-Thin.ttf)
@@ -32,11 +34,13 @@ body {
 h1 {
     font-size: 2rem;
     text-transform: uppercase;
+    color: $couleur-logo;
 }
 
 h2 {
     font-size: 1rem;
     text-transform: uppercase;
+    color: $couleur-logo;
 }
 
 p {
@@ -76,7 +80,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #313e40;
+    background-color: $couleur-logo;
     color: white;
 }
 
@@ -86,29 +90,22 @@ li a:hover {
     display: inline-block;
     margin: 0 auto;
     padding-bottom: 10px;
-    padding-top: 50px;
+    padding-top: 60px;
+    margin-bottom: 50px;
 }
 
-/* .flecheImageRight{
-    float: right;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    border: 2px solid red;
+.ligne {
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid $couleur-logo;
 }
-
-.flecheImageLeft{
-    float: left;
-    clear: both;
-} */
 
 .text {
     width: 50%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 30px;
-    padding-top: 0px;
-
+    padding-top: 30px;
 }
 
 .rechercher {
@@ -125,7 +122,7 @@ li a:hover {
     color: white;
     text-align: center;
     padding-top: 30px;
-    background-color: #313e40;
+    background-color: $couleur-logo;
 }
 
 /* À PROPOS */
@@ -136,36 +133,101 @@ li a:hover {
     text-align: center;
 }
 
-#apropos p{
+.sous-text {
     width: 50%;
     margin: 0 auto;
     padding-bottom: 70px;
 }
 
+/* CONSEILS */
+
 .conseils {
-    margin: 0 auto;
-    display: flex;
+    display: flexbox;
     flex-direction: row;
-    justify-content: space-between;
+    border-bottom: 1px solid $couleur-logo;
+}
+
+.sous-conseil {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .text-conseil {
     text-align: center;
-    font-family: Roboto;
-    font-size: 0.9rem;
-}
-
-.text-conseil p {
-    margin: 0px;
-    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 
 /* NOS ANIMAUX */
 
-
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px;
+    gap: 1rem;
+    background-color: red;
+}
 
 /* STATISTIQUES */
+
+#statistiques {
+    margin-bottom: 500px;
+}
+
+.statistique-container {
+    width: 50%;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+.statistique-bouton-bloc {
+    width: 50%;
+    text-align: center;
+    float: right;
+    margin-top: 50px;
+}
+
+.statistique-image {
+    float: left;
+}
+
+.statistique-bouton {
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    background-color: $couleur-logo;
+    color: white;
+    border: none;
+}
+
+.statistique-bouton:hover {
+    background-color: white;
+    border: 1.5px solid $couleur-logo;
+    color: $couleur-logo;
+}
+
+.admissions-2022 {
+    float: left;
+    margin-right: 50px;
+    margin-top: 70px;
+}
+
+.admissions-2021 {
+    margin-top: 70px;
+}
+
+.large {
+    font-size: 4rem;
+    color: $couleur-logo;
+}
 
 /* NOS SAUVETEURS */
 
