@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/style.css">
+    <script src="validation.js"></script>
     <title>Refuge | Aux quatre coussinets</title>
 </head>
 
@@ -45,7 +46,7 @@
 
     <form class="infolettre">
         <label for="bouton">Je souhaite m'inscrire à l'infolettre</label>
-        <input type="button" id="bouton" name="bouton">
+        <input type="checkbox" id="bouton" name="bouton">
     </form>
 
     </section>
@@ -205,35 +206,34 @@
         </map>
 
         <div class="formulaire">
-            <form id="form" action="confirmation.html" onsubmit="return validationForm()">
+            <form id="form" action="confirmation.html" target="_blank" onsubmit="return validationForm()">
                 <h1>Nous contacter</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, omnis.</p>
                 <div class="prenom-nom">
                     <div class="input-control">
                         <label for="textprenom"></label>
                         <input type="text" name="textprenom" id="textprenom" placeholder="Votre prénom">
-                        <div lang="errorMessage"></div>
+                        <div class="errorMessage"></div>
                     </div>
                     <div class="input-control">
                         <label for="textnom"></label>
                         <input type="text" name="textnom" id="textnom" placeholder="Votre nom">
-                        <div lang="errorMessage"></div>
+                        <div class="errorMessage"></div>
                     </div>
                 </div>
                 <div class="input-control">
                     <label for="email"></label>
                     <input type="mail" name="email" id="email" placeholder="Votre courriel">
-                    <div lang="errorMessage"></div>
+                    <div class="errorMessage"></div>
                 </div>
                 <div class="input-control">
                     <label for="message"></label>
-                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                    <textarea name="message" id="message" placeholder="La raison de votre contact"></textarea>
                     <div lang="errorMessage"></div>
                 </div>
                 <input type="submit" value="Soumettre">
             </form>
         </div>
-
     </section>
 </body>
 
@@ -258,7 +258,7 @@
         <div class="right">
             <div class="inline">
                 <img class="left" src="images/footer/telephone.png" alt="icône téléphone">
-                <p>(514)567-8765</p>
+                <p>(514) 567-8765</p>
             </div>
         </div>
         <div class="right">

@@ -140,7 +140,6 @@ li a:hover {
   width: 300px;
   height: 200px;
   text-align: center;
-  font-family: Roboto;
   font-size: 0.9rem;
   display: inline-block;
   margin-right: 10px;
@@ -257,7 +256,7 @@ li a:hover {
 
 /* NOS SAUVETEURS */
 .intro-sauveurs {
-  width: 60%;
+  width: 50%;
   text-align: center;
   margin: 0 auto;
   padding-top: 100px;
@@ -272,7 +271,7 @@ li a:hover {
 }
 
 .heros {
-  width: 90%;
+  width: 95%;
   align-items: center;
   margin: 0 auto;
   padding-bottom: 100px;
@@ -296,7 +295,7 @@ iframe {
 
 .map {
   width: 95%;
-  margin: 0 auto;
+  margin: 0 0 auto;
 }
 
 .formulaire {
@@ -327,10 +326,6 @@ iframe {
   margin-left: 30px;
 }
 
-.input-control.success inputs {
-  border-color: green;
-}
-
 input[type=mail] {
   margin-left: 30px;
   width: 312px;
@@ -355,6 +350,24 @@ input[type=submit]:hover {
   background-color: #313e40;
   color: white;
   border: 1px solid white;
+}
+
+input-control input:focus {
+  outline: 0;
+}
+
+input-control.success input {
+  border-color: #09c372;
+}
+
+input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error-message {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
 }
 
 /* FOOTER */
@@ -414,3 +427,14 @@ footer {
   width: 20%;
   margin: 70px auto;
 }
+
+/* PAGE CONFIRMATION */
+.confirmation {
+  margin-top: 150px;
+}
+
+.confirmation h1 {
+  margin-bottom: 10px;
+}
+
+/* MEDIA SCREEN  */

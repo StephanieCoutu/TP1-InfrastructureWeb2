@@ -1,4 +1,13 @@
 $couleur-logo: #313e40;
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
 @font-face {
     font-family: 'roboto';
     src: url(/fonts/roboto/Roboto-Light.ttf);
@@ -23,7 +32,7 @@ $couleur-logo: #313e40;
 }
 
 body {
-    width: 95%;
+    width: $width-max;
 }
 
 h1 {
@@ -48,7 +57,7 @@ p {
 
 nav {
     margin-top: 10px;
-    width: 95%;
+    width: $width-max;
     padding: 0px;
     display: inline-flex;
     justify-content: flex-end;
@@ -82,41 +91,41 @@ li a:hover {
 /* ACCUEIL */
 
 .image-accueil {
-    width: 95%;
-    margin: 0 auto;
+    width: $width-max;
+    margin: $margin-center;
     padding-top: 150px;
     padding-bottom: 10px;
     margin-bottom: 50px;
-    text-align: center;
+    text-align: $text-align;
 }
 
 .ligne {
-    width: 95%;
+    width: $width-max;
     margin: 0 auto;
-    border-bottom: 1px solid $couleur-logo;
+    @include border-bottom;
 }
 
 .text {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
+    width: $width-min;
+    margin: $margin-center;
+    text-align: $text-align;
     padding-bottom: 30px;
     padding-top: 30px;
 }
 
 .rechercher {
     width: 30%;
-    margin: 0 auto;
+    margin: $margin-center;
     padding-bottom: 20px;
 }
 
 .infolettre {
-    width: 95%;
+    width: $width-max;
     height: 100px;
-    margin: 0 auto;
+    margin: $margin-center;
     font-size: 1.5rem;
     color: white;
-    text-align: center;
+    text-align: $text-align;
     padding-top: 30px;
     background-color: $couleur-logo;
 }
@@ -124,14 +133,14 @@ li a:hover {
 /* À PROPOS */
 
 #apropos {
-    width: 95%;
+    width: $width-max;
     margin: 100px auto;
-    text-align: center;
+    text-align: $text-align;
 }
 
 .sous-text {
-    width: 50%;
-    margin: 0 auto;
+    width: $width-min;
+    margin: $margin-center;
     padding-bottom: 70px;
 }
 
@@ -140,14 +149,13 @@ li a:hover {
 .conseils {
     display: flexbox;
     flex-direction: row;
-    border-bottom: 1px solid $couleur-logo;
+    @include border-bottom;
 }
 
 .sous-conseil {
     width: 300px;
     height: 200px;
-    text-align: center;
-    font-family: Roboto;
+    text-align: $text-align;
     font-size: 0.9rem;
     display: inline-block;
     margin-right: 10px;
@@ -155,7 +163,7 @@ li a:hover {
 }
 
 .text-conseil {
-    text-align: center;
+    text-align: $text-align;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
@@ -169,8 +177,8 @@ li a:hover {
     grid-template-rows: repeat(8, 60px);
     gap: 0.7px;
     padding-bottom: 90px;
-    margin: 0 auto;
-    width: 95%;
+    margin: $margin-center;
+    width: $width-max;
 }
 
 .chatons-blanc {
@@ -204,7 +212,7 @@ li a:hover {
 }
 
 #animaux {
-    border-bottom: 1px solid $couleur-logo;
+    @include border-bottom;
 }
 
 /* STATISTIQUES */
@@ -212,12 +220,12 @@ li a:hover {
 #statistiques {
     width: 70%;
     height: 600px;
-    margin: 0 auto;
+    margin: $margin-center;
     margin-top: 100px;
 }
 
 .statistique-container {
-    width: 50%;
+    width: $width-min;
     float: right;
     margin: 0px;
     padding: 0px;
@@ -268,9 +276,9 @@ li a:hover {
 /* NOS SAUVETEURS */
 
 .intro-sauveurs {
-    width: 60%;
-    text-align: center;
-    margin: 0 auto;
+    width: $width-min;
+    text-align: $text-align;
+    margin: $margin-center;
     padding-top: 100px;
     padding-bottom: 30px;
 }
@@ -283,9 +291,9 @@ li a:hover {
 }
 
 .heros {
-    width: 90%;
+    width: $width-max;
     align-items: center;
-    margin: 0 auto;
+    margin: $margin-center;
     padding-bottom: 100px;
 }
 
@@ -303,18 +311,18 @@ li a:hover {
 iframe {
     margin-top: 100px;
     position: absolute;
-    width: 95%;
+    width: $width-max;
 }
 
 .map {
-    width: 95%;
-    margin: 0 auto;
+    width: $width-max;
+    margin: 0$margin-center;
 }
 
 .formulaire {
     width: 400px;
     height: 350px;
-    background-color:#313e40;
+    background-color:$couleur-logo;
     margin-bottom: 100px;
     position: relative;
     top: 250px; left: 700px;
@@ -336,10 +344,6 @@ iframe {
 .prenom-nom {
     display: inline-flex;
     margin-left: 30px;
-}
-
-.input-control.success inputs {
-    border-color: green;
 }
 
 input[type=mail] {
@@ -366,6 +370,24 @@ input[type=submit]:hover{
     background-color: $couleur-logo;
     color: white;
     border: 1px solid white;
+}
+
+input-control input:focus {
+    outline: 0;
+}
+
+input-control.success input {
+    border-color: #09c372;
+}
+
+input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error-message {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
 
 /* FOOTER */
@@ -399,32 +421,42 @@ input[type=submit]:hover{
 }
 
 footer {
-    width: 95%;
-    margin: 0 auto;
+    width: $width-max;
+    margin: $margin-center;
 }
 
 .logo-footer {
-    text-align: center;
+    text-align: $text-align;
     margin: 400px auto;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    width: 95%;
+    width: $width-max;
 }
 
 .nav-footer {
     width: 100%;
-    margin: 0 auto;
+    margin: $margin-center;
     display: inline-flex;
     justify-content: center;
-    text-align: center;
+    text-align: $text-align;
     padding-bottom: 20px;
-    border-bottom: 1px solid $couleur-logo;
+    @include border-bottom;
 }
 
 .icone {
-    text-align: center;
+    text-align: $text-align;
     width: 20%;
     margin: 70px auto;
 }
 
+/* PAGE CONFIRMATION */
 
+.confirmation {
+    margin-top: 150px;
+}
+
+.confirmation h1 {
+    margin-bottom: 10px;
+}
+
+/* MEDIA SCREEN  */
