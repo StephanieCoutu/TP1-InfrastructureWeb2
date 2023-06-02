@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/style.css">
-    <script src="validation.js"></script>
+    <script src="scripts/validation.js"></script>
     <title>Refuge | Aux quatre coussinets</title>
 </head>
 
@@ -206,30 +206,30 @@
         </map>
 
         <div class="formulaire">
-            <form id="form" action="confirmation.html" target="_blank" onsubmit="return validationForm()">
+            <form id="form" action="confirmation.html" onsubmit="return validateForm()">
                 <h1>Nous contacter</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, omnis.</p>
                 <div class="prenom-nom">
                     <div class="input-control">
                         <label for="textprenom"></label>
                         <input type="text" name="textprenom" id="textprenom" placeholder="Votre prénom">
-                        <div class="errorMessage"></div>
+                        <span id="name-error" class="error-message"></span>
                     </div>
                     <div class="input-control">
                         <label for="textnom"></label>
                         <input type="text" name="textnom" id="textnom" placeholder="Votre nom">
-                        <div class="errorMessage"></div>
+                        <span id="prenom-error" class="error-message"></span>
                     </div>
                 </div>
                 <div class="input-control">
                     <label for="email"></label>
                     <input type="mail" name="email" id="email" placeholder="Votre courriel">
-                    <div class="errorMessage"></div>
+                    <span id="email-error" class="error-message"></span>
                 </div>
                 <div class="input-control">
                     <label for="message"></label>
                     <textarea name="message" id="message" placeholder="La raison de votre contact"></textarea>
-                    <div lang="errorMessage"></div>
+                    <span id="message-error" class="error-message"></span>
                 </div>
                 <input type="submit" value="Soumettre">
             </form>
