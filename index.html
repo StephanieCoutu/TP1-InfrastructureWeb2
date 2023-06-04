@@ -12,42 +12,43 @@
 
 <body>
     <header>
-        <section class="accueil">
-            <img class="logo" src="images/logo/logo200x200.png" alt="logo refuge animal">
-            <nav>
-                <ul>
-                    <li><a href="#apropos"> à propos </a></li>
-                    <li><a href="#animaux"> nos animaux </a></li>
-                    <li><a href="#statistiques"> statistiques </a></li>
-                    <li><a href="#sauveurs"> nos sauveurs </a></li>
-                    <li><a href="#localisation"> notre localisation </a></li>
-                </ul>
-            </nav>
+        <img class="logo" src="images/logo/logo200x200.png" alt="logo refuge animal">
+        <nav>
+            <ul>
+                <li><a href="#apropos"> à propos </a></li>
+                <li><a href="#animaux"> nos animaux </a></li>
+                <li><a href="#statistiques"> statistiques </a></li>
+                <li><a href="#sauveurs"> nos sauveurs </a></li>
+                <li><a href="#localisation"> notre localisation </a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="image-accueil">
-        <img src="images/accueil/refugeAnimalierPX.jpg" alt="photos du refuge animalier">
-    </div>
+    <section id="accueil">
+        <div class="image-accueil">
+            <img src="images/accueil/refugeAnimalierPX.jpg" alt="photos du refuge animalier">
+        </div>
 
-    <div class="ligne"></div>
+        <div class="ligne"></div>
 
-    <div class="text">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illum, placeat error a repellendus ipsa Animi
-            nulla obcaecati sunt
-            asperiores
-        </p>
-    </div>
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illum, placeat error a repellendus ipsa
+                Animi
+                nulla obcaecati sunt
+                asperiores
+            </p>
+        </div>
 
-    <form class="rechercher">
-        <label for="text"></label>
-        <input type="text" id="text" name="text">
-        <button>Rechercher sur le site</button>
-    </form>
+        <form class="rechercher">
+            <label for="text"></label>
+            <input type="text" id="text" name="text">
+            <button>Rechercher sur le site</button>
+        </form>
 
-    <form class="infolettre">
-        <label for="bouton">Je souhaite m'inscrire à l'infolettre</label>
-        <input type="checkbox" id="bouton" name="bouton">
-    </form>
+        <form class="infolettre">
+            <label for="bouton">Je souhaite m'inscrire à l'infolettre</label>
+            <input type="checkbox" id="bouton" name="bouton">
+        </form>
 
     </section>
 
@@ -83,7 +84,7 @@
 
     <section id="animaux">
 
-         <div class="grid-container">
+        <div class="grid-container">
             <div class="chatons-blanc">
                 <img src="images/nosAnimaux/chat-horizontal.jpg" alt="photo de chat">
             </div>
@@ -123,12 +124,12 @@
 
             <div class="admissions-2022">
                 <p class="large">6 678</p>
-                <p>admissions/année</p>
+                <p class="sous-text-admission">admissions/année</p>
             </div>
 
             <div class="admissions-2021">
                 <p class="large">6 450</p>
-                <p>admissions/année</p>
+                <p class="sous-text-admission">admissions/année</p>
             </div>
         </div>
 
@@ -199,11 +200,11 @@
     <section id="localisation">
 
         <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d355754.6327400681!2d-74.4407464680117!3d45.84463301947131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4
+            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d355754.6327400681!2d-74.4407464680117!3d45.84463301947131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4
         f13.1!4m11!3e6!4m3!3m2!1d45.6323653!2d-74.3543337!4m5!1s0x4ccf6aeb87ee51ed%3A0x4cf050c4acc5bb0d!2sspca%20laurentides!3m2!1d46.0695754!2d-74.2757918!5e0!3m2!1sfr!
         2sca!4v1684792785252!5m2!1sfr!2sca" width="100%" height="600" style="border:0;" allowfullscreen=""
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </map>
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
         <div class="formulaire">
             <form id="form" action="confirmation.html" onsubmit="return validateForm()">
@@ -213,12 +214,12 @@
                     <div class="input-control">
                         <label for="textprenom"></label>
                         <input type="text" name="textprenom" id="textprenom" placeholder="Votre prénom">
-                        <span id="name-error" class="error-message"></span>
+                        <span id="textprenom-error" class=""></span>
                     </div>
                     <div class="input-control">
                         <label for="textnom"></label>
                         <input type="text" name="textnom" id="textnom" placeholder="Votre nom">
-                        <span id="prenom-error" class="error-message"></span>
+                        <span id="textnom-error" class=""></span>
                     </div>
                 </div>
                 <div class="input-control">
@@ -231,9 +232,16 @@
                     <textarea name="message" id="message" placeholder="La raison de votre contact"></textarea>
                     <span id="message-error" class="error-message"></span>
                 </div>
+
                 <input type="submit" value="Soumettre">
+
+                <div>
+                    <label id="status" class="statusForeColorRed"></label>
+                </div>
             </form>
         </div>
+
+            
     </section>
 </body>
 

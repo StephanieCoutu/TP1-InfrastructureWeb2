@@ -21,18 +21,19 @@
 
 body {
   width: 95%;
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: #313e40;
+  color: rgb(49, 62, 64);
 }
 
 h2 {
   font-size: 1rem;
   text-transform: uppercase;
-  color: #313e40;
+  color: rgb(49, 62, 64);
 }
 
 p {
@@ -71,7 +72,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #313e40;
+  background-color: rgb(49, 62, 64);
   color: white;
 }
 
@@ -88,7 +89,7 @@ li a:hover {
 .ligne {
   width: 95%;
   margin: 0 auto;
-  border-bottom: 1px solid #313e40;
+  border-bottom: 1px solid rgb(49, 62, 64);
 }
 
 .text {
@@ -100,7 +101,8 @@ li a:hover {
 }
 
 .rechercher {
-  width: 30%;
+  width: 100%;
+  text-align: center;
   margin: 0 auto;
   padding-bottom: 20px;
 }
@@ -113,7 +115,7 @@ li a:hover {
   color: white;
   text-align: center;
   padding-top: 30px;
-  background-color: #313e40;
+  background-color: rgb(49, 62, 64);
 }
 
 /* À PROPOS */
@@ -133,7 +135,7 @@ li a:hover {
 .conseils {
   display: flexbox;
   flex-direction: row;
-  border-bottom: 1px solid #313e40;
+  border-bottom: 1px solid rgb(49, 62, 64);
 }
 
 .sous-conseil {
@@ -153,14 +155,18 @@ li a:hover {
 }
 
 /* NOS ANIMAUX */
+#animaux {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(18, 60px);
-  grid-template-rows: repeat(8, 60px);
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   gap: 0.7px;
   padding-bottom: 90px;
-  margin: 0 auto;
-  width: 95%;
+  justify-content: center;
 }
 
 .chatons-blanc {
@@ -194,7 +200,7 @@ li a:hover {
 }
 
 #animaux {
-  border-bottom: 1px solid #313e40;
+  border-bottom: 1px solid rgb(49, 62, 64);
 }
 
 /* STATISTIQUES */
@@ -228,15 +234,15 @@ li a:hover {
   width: 150px;
   height: 30px;
   font-size: 1rem;
-  background-color: #313e40;
+  background-color: rgb(49, 62, 64);
   color: white;
   border: none;
 }
 
 .statistique-bouton:hover {
   background-color: white;
-  border: 1.5px solid #313e40;
-  color: #313e40;
+  border: 1.5px solid rgb(49, 62, 64);
+  color: rgb(49, 62, 64);
 }
 
 .admissions-2022 {
@@ -251,7 +257,7 @@ li a:hover {
 
 .large {
   font-size: 4rem;
-  color: #313e40;
+  color: rgb(49, 62, 64);
 }
 
 /* NOS SAUVETEURS */
@@ -279,7 +285,7 @@ li a:hover {
 
 .bold {
   font-family: "roboto-bold";
-  color: #313e40;
+  color: rgb(49, 62, 64);
 }
 
 .margin {
@@ -301,11 +307,11 @@ iframe {
 .formulaire {
   width: 400px;
   height: 350px;
-  background-color: #313e40;
+  background-color: rgba(49, 62, 64, 0.97);
   margin-bottom: 100px;
   position: relative;
   top: 250px;
-  left: 700px;
+  left: 70%;
 }
 
 .formulaire h1 {
@@ -343,17 +349,26 @@ input[type=submit] {
   width: 100px;
   height: 30px;
   font-family: "roboto-bold";
-  color: #313e40;
+  color: rgb(49, 62, 64);
 }
 
 input[type=submit]:hover {
-  background-color: #313e40;
+  background-color: rgb(49, 62, 64);
   color: white;
   border: 1px solid white;
 }
 
 .error {
-  border: 1px solid red;
+  border: 3px solid red;
+}
+
+.error-star::after {
+  content: "*";
+  color: red;
+}
+
+.statusForeColorRed {
+  color: red;
 }
 
 /* FOOTER */
@@ -405,7 +420,7 @@ footer {
   justify-content: center;
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #313e40;
+  border-bottom: 1px solid rgb(49, 62, 64);
 }
 
 .icone {
@@ -423,4 +438,228 @@ footer {
   margin-bottom: 10px;
 }
 
-/* MEDIA SCREEN  */
+/* MEDIA SCREEN 1200px */
+@media screen and (max-width: 1200px) {
+  #statistiques {
+    width: 90%;
+  }
+  .statistique-image {
+    width: 40%;
+  }
+  .formulaire {
+    top: 250px;
+    left: 60%;
+  }
+  #animaux img {
+    width: 99%;
+  }
+}
+/* MEDIA SCREEN 1100PX */
+@media screen and (max-width: 1100px) {
+  #animaux img {
+    width: 99%;
+  }
+}
+/* MEDIA SCREEN 1000PX */
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 0.8rem;
+  }
+  .rechercher {
+    width: 35%;
+  }
+  .sous-conseil {
+    width: 200px;
+  }
+  #animaux img {
+    width: 99%;
+  }
+  .hero {
+    width: 28%;
+  }
+  #sauveurs img {
+    width: 100%;
+  }
+}
+/* MEDIA SCREEN 900PX */
+@media screen and (max-width: 900px) {
+  nav li a {
+    font-size: 13px;
+  }
+  .image-accueil img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .rechercher {
+    width: 100%;
+  }
+  .prenom-nom {
+    display: block;
+  }
+  input[type=text] {
+    width: 200px;
+  }
+  input[type=mail] {
+    margin-left: 30px;
+    width: 200px;
+  }
+  textarea {
+    width: 200px;
+    margin-left: 30px;
+  }
+  .formulaire {
+    width: 350px;
+    height: 350px;
+    top: 300px;
+    left: 60%;
+  }
+  .formulaire p {
+    margin-right: 15px;
+  }
+  .icone {
+    width: 30%;
+  }
+}
+/* MEDIA SCREEN 800PX  */
+@media screen and (max-width: 800px) {
+  nav li a {
+    font-size: 11px;
+  }
+  #statistiques img {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .statistique-image h2 {
+    padding-top: 50px;
+  }
+  .large {
+    font-size: 3rem;
+  }
+  .formulaire {
+    left: 50%;
+  }
+  .tel-courriel {
+    width: 100px;
+  }
+}
+/* MEDIA SCREEN 700PX */
+@media screen and (max-width: 700px) {
+  nav li a {
+    font-size: 13px;
+  }
+  .image-accueil img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .rechercher {
+    width: 100%;
+  }
+  .prenom-nom {
+    display: block;
+  }
+  input[type=text] {
+    width: 200px;
+  }
+  input[type=mail] {
+    margin-left: 30px;
+    width: 200px;
+  }
+  textarea {
+    width: 200px;
+    margin-left: 30px;
+  }
+  .formulaire {
+    width: 350px;
+    height: 350px;
+    top: 300px;
+    left: 60%;
+  }
+  .formulaire p {
+    margin-right: 15px;
+  }
+  .icone {
+    width: 30%;
+  }
+}
+/* MEDIA SCREEN 800PX  */
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 0.7rem;
+  }
+  nav li a {
+    font-size: 10px;
+    padding-left: 2px;
+  }
+  .sous-conseil {
+    width: 150px;
+  }
+  .formulaire {
+    left: 52%;
+    width: 280px;
+  }
+}
+/* MEDIA SCREEN 600PX */
+@media screen and (max-width: 600px) {
+  nav li {
+    display: list-item;
+  }
+  nav li a {
+    padding-bottom: 2px;
+  }
+  .image-accueil {
+    padding-top: 50px;
+  }
+  .large {
+    font-size: 2rem;
+  }
+  .intro-sauveurs {
+    padding-top: 0px;
+  }
+  .hero {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  .nav-footer ul li {
+    display: inline-flex;
+  }
+}
+/* MEDIA SCREEN 500PX */
+@media screen and (max-width: 500px) {
+  .sous-conseil {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .large {
+    font-size: 1.5rem;
+  }
+  .sous-text-admission {
+    font-size: 0.6rem;
+  }
+  .hero {
+    margin-bottom: 10px;
+  }
+  .formulaire {
+    left: 50%;
+    top: 350px;
+    width: 220px;
+    height: 300px;
+  }
+  .formulaire h1 {
+    font-size: 1rem;
+  }
+  input[type=text] {
+    width: 150px;
+  }
+  input[type=mail] {
+    width: 150px;
+  }
+  textarea {
+    width: 150px;
+    margin-left: 30px;
+  }
+  .logo-footer {
+    margin-top: 450px;
+  }
+}
