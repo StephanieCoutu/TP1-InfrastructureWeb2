@@ -328,7 +328,6 @@ iframe {
     width: 400px;
     height: 350px;
     background-color: rgba(49, 62, 64, 0.97);
-    margin-bottom: 100px;
     position: relative;
     top: 250px;
     left: 70%;
@@ -389,7 +388,7 @@ input[type=submit]:hover {
 
 
 .statusForeColorRed {
-    color:red;
+    color: red;
 }
 
 /* FOOTER */
@@ -538,12 +537,12 @@ footer {
     input[type=text] {
         width: 200px;
     }
-    
+
     input[type=mail] {
         margin-left: 30px;
         width: 200px;
     }
-    
+
     textarea {
         width: 200px;
         margin-left: 30px;
@@ -617,12 +616,12 @@ footer {
     input[type=text] {
         width: 200px;
     }
-    
+
     input[type=mail] {
         margin-left: 30px;
         width: 200px;
     }
-    
+
     textarea {
         width: 200px;
         margin-left: 30px;
@@ -650,6 +649,7 @@ footer {
     p {
         font-size: 0.7rem;
     }
+
     nav li a {
         font-size: 10px;
         padding-left: 2px;
@@ -735,11 +735,11 @@ footer {
     input[type=text] {
         width: 150px;
     }
-    
+
     input[type=mail] {
         width: 150px;
     }
-    
+
     textarea {
         width: 150px;
         margin-left: 30px;
