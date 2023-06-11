@@ -20,11 +20,6 @@ function validateForm() {
     inputEmail.classList.remove('error');
     inputMessage.classList.remove('error');
 
-    document.getElementById('textprenom-error').classList.remove('error-star');
-    document.getElementById('textnom-error').classList.remove('error-star');
-    document.getElementById('email-error').classList.remove('error-star');
-    document.getElementById('message-error').classList.remove('error-star');
-
     inputStatus.innerHTML = "* Ce champ est requis!";
 
     if (prenom != '') {
@@ -39,12 +34,9 @@ function validateForm() {
 
             return true;
 
-
           } else {
 
             inputMessage.classList.add('error');
-
-            document.getElementById('message-error').classList.add('error-star');
 
             return false;
 
@@ -54,8 +46,6 @@ function validateForm() {
 
           inputEmail.classList.add('error');
 
-          document.getElementById('email-error').classList.add('error-star');
-
           return false;
 
         }
@@ -64,8 +54,6 @@ function validateForm() {
 
         inputNom.classList.add('error');
 
-        document.getElementById('textnom-error').classList.add('error-star');
-
         return false;
 
       }
@@ -73,8 +61,6 @@ function validateForm() {
     } else {
 
       inputPrenom.classList.add('error');
-
-      document.getElementById('textprenom-error').classList.add('error-star');
 
       return false;
 

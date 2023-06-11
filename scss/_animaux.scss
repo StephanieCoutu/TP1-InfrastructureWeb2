@@ -1,0 +1,54 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+#animaux {
+    width: $width-max;
+    margin: $margin-center;
+    @include border-bottom;
+}
+
+.animaux__gridContainer {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 0.7px;
+    padding-bottom: 90px;
+    justify-content: center;
+}
+
+.animaux__gridContainer--chatHorizontal {
+    grid-row: 1/5;
+    grid-column: 5/13;
+}
+
+.animaux__gridContainer--chatVertical {
+    grid-row: 3/7;
+    grid-column: 1/5;
+}
+
+.animaux__gridContainer--chatVertical01 {
+    grid-row: 4/8;
+    grid-column: 16/19;
+}
+
+.animaux__gridContainer--chienVertical {
+    grid-row: 5/8;
+    grid-column: 5/8;
+}
+
+.animaux__gridContainer--chienVertical01 {
+    grid-row: 2/5;
+    grid-column: 13/16;
+}
+
+.animaux__gridContainer--chienHorizontal {
+    grid-row: 5/9;
+    grid-column: 8/16;
+}

@@ -1,0 +1,66 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+footer {
+    width: $width-max;
+    margin: $margin-center;
+}
+
+.footer__logo {
+    text-align: $text-align;
+    margin: 400px auto;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    width: $width-max;
+}
+
+.footer__nav {
+    width: 100%;
+    margin: $margin-center;
+    display: inline-flex;
+    justify-content: center;
+    text-align: $text-align;
+    padding-bottom: 20px;
+    @include border-bottom;
+}
+
+.footer__text--left-absolute {
+    float: left;
+    position: absolute;
+    margin-top: 70px;
+}
+
+.footer__containerTelCourriel {
+    float: right;
+    width: 400px;
+    margin-top: 70px;
+}
+
+.footer__text--right {
+    float: right;
+    margin-left: 30px;
+}
+
+.footer__text--inline {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 150px;
+}
+
+.footer__text--left {
+    float: left;
+    margin-right: 10px;
+}
+
+.footer__icone {
+    text-align: $text-align;
+    width: 20%;
+    margin: 70px auto;
+}

@@ -1,0 +1,19 @@
+@use 'header';
+
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+.confirmation {
+    margin-top: 150px;
+}
+
+.confirmation h1 {
+    margin-bottom: 10px;
+}

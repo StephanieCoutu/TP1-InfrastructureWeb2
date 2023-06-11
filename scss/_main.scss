@@ -1,0 +1,91 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url(fonts/roboto/Roboto-Bold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+
+}
+
+body {
+    width: $width-max;
+    margin: $margin-center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $couleur-logo;
+}
+
+h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $couleur-logo;
+}
+
+p {
+    font-size: 0.9rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.accueil__image {
+    width: $width-max;
+    margin: $margin-center;
+    padding-top: 150px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    text-align: $text-align;
+}
+
+.ligne {
+    width: $width-max;
+    margin: 0 auto;
+    @include border-bottom;
+}
+
+.accueil__text {
+    width: $width-min;
+    margin: $margin-center;
+    text-align: $text-align;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.accueil__formulaire {
+    width: 100%;
+    text-align: center;
+    margin: $margin-center;
+    padding-bottom: 20px;
+}
+
+.accueil__formulaire--infolettre {
+    width: $width-max;
+    height: 100px;
+    margin: $margin-center;
+    font-size: 1.5rem;
+    color: white;
+    text-align: $text-align;
+    padding-top: 30px;
+    background-color: $couleur-logo;
+}

@@ -1,0 +1,62 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.logo {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    position: absolute;
+}
+
+nav {
+    margin-top: 10px;
+    width: $width-max;
+    padding: 0px;
+    display: inline-flex;
+    justify-content: flex-end;
+
+    li {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    a {
+        display: block;
+        color: black;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $couleur-logo;
+            color: white;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+}

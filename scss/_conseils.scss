@@ -1,0 +1,42 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+#conseils {
+    width: $width-max;
+    margin: 100px auto;
+    text-align: $text-align;
+}
+
+.conseils__sous-text {
+    width: $width-min;
+    margin: $margin-center;
+    padding-bottom: 70px;
+}
+
+.conseils__conseils {
+    flex-direction: row;
+    @include border-bottom;
+}
+
+.conseils__sous-conseil {
+    width: 300px;
+    height: 200px;
+    text-align: $text-align;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.conseils__text {
+    text-align: $text-align;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}

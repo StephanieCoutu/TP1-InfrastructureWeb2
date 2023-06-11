@@ -1,0 +1,65 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+#statistiques {
+    width: 70%;
+    height: 600px;
+    margin: $margin-center;
+    margin-top: 100px;
+}
+
+.statistique__container {
+    width: $width-min;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+.statistique__bouton--container {
+    width: 50%;
+    text-align: left;
+    float: right;
+    clear: both;
+    margin-top: 40px;
+}
+
+.statistique__image {
+    float: left;
+}
+
+.statistique__bouton {
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    background-color: $couleur-logo;
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: white;
+        border: 1.5px solid $couleur-logo;
+        color: $couleur-logo;
+    }
+}
+
+.statistiques__admissions-2022 {
+    float: left;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.statistiques__admissions-2021 {
+    margin-top: 30px;
+}
+
+.statistiques__admission--large {
+    font-size: 4rem;
+    color: $couleur-logo;
+}

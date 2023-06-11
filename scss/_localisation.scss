@@ -1,0 +1,82 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+iframe {
+    margin-top: 100px;
+    position: absolute;
+    width: $width-max;
+}
+
+.localisation__map {
+    width: $width-max;
+    margin: 0$margin-center;
+}
+
+.localisation__formulaire {
+    width: 400px;
+    height: 350px;
+    background-color: rgba(49, 62, 64, 0.97);
+    position: relative;
+    top: 250px;
+    left: 70%;
+}
+
+.localisation__formulaire h1 {
+    color: white;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.localisation__formulaire p {
+    color: white;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.localisation__formulaire--prenomNomContainer {
+    display: inline-flex;
+    margin-left: 30px;
+}
+
+input[type=email] {
+    margin-left: 30px;
+    width: 312px;
+}
+
+textarea {
+    width: 312px;
+    margin-left: 30px;
+}
+
+input[type=submit] {
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    font-family: 'roboto-bold';
+    color: $couleur-logo;
+
+    &:hover {
+        background-color: $couleur-logo;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+.error {
+    border: 3px solid red;
+}
+
+.statusForeColorRed {
+    margin-left: 30px;
+    color: red;
+}

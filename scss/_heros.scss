@@ -1,0 +1,40 @@
+$couleur-logo: rgb(49, 62, 64);
+$width-max: 95%;
+$width-min: 50%;
+$margin-center: 0 auto;
+$text-align: center;
+
+@mixin border-bottom {
+    border-bottom: 1px solid $couleur-logo;
+}
+
+.heros__introduction {
+    width: $width-min;
+    text-align: $text-align;
+    margin: $margin-center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.heros__container-heros {
+    width: $width-max;
+    align-items: center;
+    margin: $margin-center;
+    padding-bottom: 100px;
+}
+
+.heros__container-hero {
+    width: 30%;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.heros__container-hero--bold {
+    font-family: 'Roboto-bold';
+    color: $couleur-logo;
+}
+
+.heros__container-hero--margin {
+    margin-bottom: 10px;
+}
