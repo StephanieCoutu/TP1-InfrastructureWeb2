@@ -4,14 +4,16 @@
     "description": "Une application incroyable",
     "icons": [
       {
-        "src": "/images/logo/logo200x200.png",
+        "src": "/images/logo/logo192x192.png",
         "sizes": "200x200",
-        "type": "image/png"
+        "type": "image/png",
+        "porpose": "any maskable"
       },
       {
         "src": "/images/logo/logo512x512.png",
         "sizes": "512x512",
-        "type": "image/png"
+        "type": "image/png",
+        "porpose": "any maskable"
       }
     ],
     "start_url": "/index.html",
